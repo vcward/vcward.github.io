@@ -7,17 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Victoria Ward</title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script> <!-- Custom CSS -->
     <link href="css/styles.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/4.6.3/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
-        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d1d468380c.js" crossorigin="anonymous"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -27,9 +31,9 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-            aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg fixed-top bg-light d-md-none">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa fa-bars" aria-hidden="true"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -37,54 +41,73 @@
                 <a class="nav-item nav-link" href="#about">About Me</a>
                 <a class="nav-item nav-link" href="#skills">What I Do</a>
                 <a class="nav-item nav-link" href="#resume">Resume</a>
+                <a class="nav-item nav-link" href="#featured">Featured Projects</a>
                 <a class="nav-item nav-link" href="#contact">Contact</a>
             </div>
         </div>
     </nav>
-    <div class="header-row">
-        <h1>Victoria Ward</h1>
-        <h2>Web Developer</h2>
+    <div class="col-md-1 h-100 fixed-top d-none d-md-block sidebar">
+        <div id="sidebar-links" class="h-100 row align-content-center">
+            <a class="nav-item nav-link" href="#about">About Me <i class="fas fa-user"></i></a>
+            <a class="nav-item nav-link" href="#skills">What I Do <i class="fas fa-check"></i></a>
+            <a class="nav-item nav-link" href="#resume">Resume <i class="fas fa-list-ul"></i></a>
+            <a class="nav-item nav-link" href="#featured">Featured Projects <i class="fas fa-folder-open"></i></a>
+            <a class="nav-item nav-link" href="#contact">Contact <i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+    <div class="header-row col-12 col-md-11 offset-md-1 h-100 row align-content-center" id="particle-container">
+        <div id="site-header" class="mx-auto">
+            <h1>Victoria Ward</h1>
+            <h2>Web Developer</h2>
+        </div>
     </div>
     <div class="container-fluid">
-        <div class="row" id="about">
-            <div class="col-12 col-md-10 mx-auto content">
-                <h4>About Me</h4><br>
-                <img src="photo.png" alt="Portrait" class="img-thumbnail portrait">
-                <p>Hi! My name is Victoria. I am a front-end developer based in Hawaii and currently work for the University
-                    of Hawaii Economic Research Organization (UHERO). I code layouts, build single page applications, and
+        <div class="row justify-content-center" id="about">
+            <div class="col-12 col-md-5 offset-md-1 content">
+                <h3>About Me</h3><br />
+                <div class="d-flex flex-row align-items-center" id="about-desc">
+                    <img src="photo.png" alt="Portrait" class="img-thumbnail portrait rounded-circle mr-3">
+                    Hi! My name is Victoria. I am a front-end developer based in Hawaii and currently work as the
+                    Assistant Software Developer for the
+                    University
+                    of Hawaii Economic Research Organization (UHERO). I code layouts, build single page applications,
+                    and
                     visualize data.
-                </p>
+                </div>
             </div>
         </div>
-        <div class="row" id="skills">
-            <div class="col-12">
-                <h4>What I Do</h4>
+        <div class="row justify-content-center" id="skills">
+            <div class="col-12 col-md-11 offset-md-1">
+                <h3>What I Do</h3>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 offset-md-1 col-md-3">
                 <i class="fa fa-code" aria-hidden="true"></i>
                 <p>
-                    <strong>Code</strong><br> I primarily work with:<br> <strong>HTML, CSS, JS, Angular,</strong> and <strong>SCSS</strong><br>                    while sometimes diving into:<br> <strong>MySQL, Ruby on Rails,</strong> and <strong>Go</strong>
+                    <strong>Code</strong><br /> I primarily work with:<br /> <strong>HTML, CSS, JS, Angular,</strong>
+                    and <strong>SCSS</strong><br />while sometimes diving into:<br /> <strong>MySQL, Ruby on
+                        Rails,</strong> and <strong>Go</strong>
                 </p>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-3">
                 <i class="fa fa-desktop" aria-hidden="true"></i>
                 <p>
-                    <strong>Design</strong><br> I also have experience working with the following design software:<br> <strong>InDesign,
-                    Illustrator,</strong> and <strong>Photoshop</strong>
+                    <strong>Design</strong><br /> I also have experience working with the following design
+                    software:<br /> <strong>InDesign, Illustrator,</strong> and <strong>Photoshop</strong>
                 </p>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-3">
                 <i class="fa fa-bar-chart" aria-hidden="true"></i>
                 <p>
-                    <strong>Data Visualization</strong><br> I create static and dynamic data visualizations using:<br> <strong>R, Highcharts,</strong>                    and <strong>D3</strong>
+                    <strong>Data Visualization</strong><br /> I create static and dynamic data visualizations
+                    using:<br /> <strong>R, Highcharts,</strong> and <strong>D3</strong>
                 </p>
             </div>
         </div>
         <div class="row" id="resume">
-            <div class="col-12">
-                <h4>Resume</h4>
+            <div class="col-12 col-md-11 offset-md-1">
+                <h3>Resume</h3>
             </div>
-            <div class="col-12 col-sm-8 mx-auto">
+            <div class="col-12 col-md-11 offset-md-1">
                 <ul class="resume-timeline">
                     <li class="timeline-section">
                         <div class="date">
@@ -93,16 +116,21 @@
                         <div class="circle"></div>
                         <div class="detail">
                             <p>
-                                <b>Assistant Software Developer</b><br> University of Hawaii Economic Research Organization
+                                <strong>Assistant Software Developer</strong><br /> University of Hawaii Economic
+                                Research Organization
                                 (UHERO)
-                                <br>
-                                <p>
-                                    Collaborated with the development team in creating new web applications<br> Developed
-                                    single page applications with the Angular framework<br> Contributed to REST API development
-                                    using Go<br> Updated content on UHERO’s website via CMS<br> Created static and dynamic
-                                    data visualizations with D3, Highcharts, and R<br> Other duties: Laid out reports, sent
-                                    email campaigns, and created content for social media to promote new content
-                                </p>
+                                <br />
+                            <ul class="detailed-list">
+                                <li>Redesigned UHERO's website in Wordpress (the UHERO site won AUBER's 2020 Award of
+                                    Excellence for Websites)</li>
+                                <li>Collaborated with the development team in creating new web applications</li>
+                                <li>Developed single page applications with the Angular framework</li>
+                                <li>Contributed to REST API development using Go</li>
+                                <li>Updated content on UHERO’s website via CMS</li>
+                                <li>Created static and dynamic data visualizations with D3, Highcharts, and R</li>
+                                <li>Other duties: Laid out reports, sent email campaigns, and created content for social
+                                    media to promote new content</li>
+                            </ul>
                             </p>
                         </div>
                     </li>
@@ -113,14 +141,17 @@
                         <div class="circle"></div>
                         <div class="detail">
                             <p>
-                                <b>Freelance Web Developer</b><br> University of Hawaii Economic Research Organization (UHERO)
-                                <br>
-                                <p>
-                                    Provided front-end support toward UHERO’s Hawaii Innovation Dashboard<br> Updated content
-                                    on UHERO’s website via CMS<br> Created static and dynamic data visualizations with D3,
-                                    Highcharts, and R<br> Other duties: Laid out reports, sent email campaigns, and created
-                                    content for social media to promote new content
-                                </p>
+                                <strong>Freelance Web Developer</strong><br /> University of Hawaii Economic Research
+                                Organization (UHERO)
+                                <br />
+                            <ul class="detailed-list">
+                                <li>Provided front-end support toward UHERO’s Hawaii Innovation Dashboard</li>
+                                <li>Updated content on UHERO’s website via CMS</li>
+                                <li>Created static and dynamic data visualizations with D3, Highcharts, and R</li>
+                                <li>Contributed to UHERO's Ruby on Rails based database manager</li>
+                                <li>Other duties: Laid out reports, sent email campaigns, and created content for social
+                                    media to promote new content</li>
+                            </ul>
                             </p>
                         </div>
                     </li>
@@ -131,11 +162,12 @@
                         <div class="circle"></div>
                         <div class="detail">
                             <p>
-                                <b>Web Tech Support</b><br> University of Hawaii at Mānoa, Department of Economics
-                                <br>
-                                <p>
-                                    Maintained and updated the content of the department’s website
-                                </p>
+                                <strong>Web Tech Support</strong><br /> University of Hawaii at Mānoa, Department of
+                                Economics
+                                <br />
+                            <ul class="detailed-list">
+                                <li> Maintained and updated the content of the department’s website</li>
+                            </ul>
                             </p>
                         </div>
                     </li>
@@ -146,7 +178,7 @@
                         <div class="circle"></div>
                         <div class="detail">
                             <p>
-                                <b>Master of Arts, Economics</b><br> University of Hawaii at Mānoa
+                                <strong>Master of Arts, Economics</strong><br /> University of Hawaii at Mānoa
                             </p>
                         </div>
                     </li>
@@ -157,24 +189,59 @@
                         <div class="circle"></div>
                         <div class="detail">
                             <p>
-                                <b>Bachelor of Arts, Political Science</b><br>
-                                <b>Bachelor of Arts, Economics</b><br> University of Hawaii at Mānoa
+                                <strong>Bachelor of Arts, Political Science</strong><br />
+                                <strong>Bachelor of Arts, Economics</strong><br /> University of Hawaii at Mānoa
                             </p>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="row" id="contact">
-            <div class="col-12">
-                <h4>Contact</h4>
+        <div class="row" id="featured">
+            <div class="col-12 col-md-11 offset-md-1">
+                <h3>Featured Projects</h3>
             </div>
-            <div class="col-12 col-md-6 mx-auto">
-                <a href="mailto:ward.vickyc@gmail.com" title="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+            <div class="col-12 col-md-11 offset-md-1">
+                <div class="card-deck">
+                    <div class="card shadow">
+                        <img src="./innovation_dash.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 class="card-title"><a href="https://uhero.hawaii.edu/innovation/index.html#/">Hawai'i
+                                    Innovation Matters Dashboard</a></h4>
+                            <p class="card-text">My first project with UHERO was to modify a dashboard built by a local software bootcamp to prepare it for release. It was built with AngularJS and uses D3.js to visualize data.</p>
+                        </div>
+                    </div>
+                    <div class="card shadow">
+                        <img src="./data_portal.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 class="card-title"><a href="https://data.uhero.hawaii.edu">UHERO Data Portal</a></h4>
+                            <p class="card-text">The data portal was built with Angular (v2+) to visualize time series data. Data is presented in charts (Highcharts/Highstock) and tables (ag-grid/prime-ng).</p>
+                        </div>
+                    </div>
+                    <div class="card shadow">
+                        <img src="./uhero_website.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 class="card-title"><a href="https://uhero.hawaii.edu">UHERO Website</a></h4>
+                            <p class="card-text">Redeisgned and moved the UHERO website to Wordpress. The site won AUBER's 2020 Award of
+                                Excellence for Websites.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="contact">
+            <div class="col-12 col-md-11 offset-md-1">
+                <h3>Contact</h3>
+            </div>
+            <div class="col-12 col-md-11 offset-md-1">
+                <a href="mailto:ward.vickyc@gmail.com" title="email"><i class="fa fa-envelope-o"
+                        aria-hidden="true"></i></a>
                 <a href="https://github.com/vcward" title="github"><i class="fa fa-github" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>

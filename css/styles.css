@@ -4,9 +4,25 @@ body, html {
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
-  color: #000;
+  color: #FFF;
+  background-color:#010E1B;
+}
+
+strong {
+  color: #007EA7;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+canvas {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
 }
 
 nav {
@@ -19,46 +35,69 @@ nav {
 }
 
 .navbar .navbar-nav .nav-link {
-  color: #82AAA1;
+  color: #007EA7;
   font-size: 0.9em;
   text-transform: uppercase;
   padding: 0.25rem 0.5rem;
 }
 
+#h1-name, #web-dev {
+  color: #007EA7;
+  font-size: 1.5rem;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#particle-container > a.particle-links.nav-item.nav-link {
+  color: #000;
+  position: relative;
+  z-index: 2;
+}
+
+.sidebar {
+  background-color: #000C19;
+}
+
+#sidebar-links > a.nav-item.nav-link {
+  color: #FFF;
+  letter-spacing: 0.125em;
+  text-align: right;
+  text-transform: uppercase;
+  width: 100%;
+}
+
 .header-row {
+  background-color: #010e1b;
   position: absolute;
   top: 0;
   width: 100%;
-  background-image: url('../main.jpeg');
+  /* background-image: url('../main.jpeg'); */
   height: 100%;
   background-attachment: fixed;
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #82AAA1;
-  text-shadow: 1px 1px 0 #000;
-  font-weight: bold;
+  color: #FFF;
+  /* text-shadow: 1px 1px 0 #000; */
+  /* font-weight: bold; */
   text-transform: uppercase;
 }
 
 .header-row h1 {
-  position: relative;
-  top: 50%;
   text-align: center;
   margin-bottom: 0;
-  padding-bottom: 5px;
-  font-size: 2.5em;
-  font-weight: 700;
-  letter-spacing: 4px;
+  /* padding-bottom: 5px; */
+  font-size: 3em;
+  letter-spacing: 0.125em;
+  z-index: 1;
 }
 
 .header-row h2 {
-  position: relative;
-  top: 52%;
   text-align: center;
   font-size: 1.2em;
-  font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 0.125em;
+  z-index: 1;
 }
 
 .container-fluid {
@@ -70,21 +109,13 @@ nav {
   padding: 45px 0;
 }
 
-.row:nth-child(even) {
-  background-color: #F8F9FA;
-}
-
-#about {
-  text-align: center;
-}
-
 #about .portrait {
   max-width: 200px;
   margin-right: 10px;
   margin-bottom: 10px;
 }
 
-#about p {
+#about-desc {
   text-align: left;
 }
 
@@ -95,17 +126,39 @@ nav {
   }
 }
 
-h4 {
+h3 {
   display: inline-block;
   font-size: 1.2em;
   text-transform: uppercase;
-  border-bottom: 3px solid #82AAA1;
+  border-bottom: 3px solid #007EA7;
   padding-bottom: 10px;
   margin-bottom: 1em;
 }
 
-#skills {
+#about, #skills, #resume, #featured, #contact {
   text-align: center;
+}
+
+#featured .card {
+ background: #00182DA8;
+}
+
+#featured .card-body {
+  text-align: left;
+}
+
+#featured .card-body .card-text {
+  font-size: 0.9em;
+}
+
+#featured .card-body .card-title a {
+  color:  #007EA7;
+  font-size: 0.8em;
+  text-decoration: underline;
+}
+
+#featured .card-body .card-title a:hover {
+  color: #5F8CA7
 }
 
 #skills div {
@@ -114,16 +167,12 @@ h4 {
 
 #skills .fa {
   font-size: 4em;
-  color: #82AAA1;
+  color: #007EA7;
   margin-bottom: 10px;
 }
 
 #skills p {
-  font-size: 0.9em;
-}
-
-#resume {
-  text-align: center;
+  font-size: 1em;
 }
 
 /* Resume Timeline based on: https://codepen.io/brady_wright/pen/NNOvrW */
@@ -142,10 +191,10 @@ h4 {
 
 .resume-timeline .timeline-section .date {
   margin: 0 0 .5em 0;
-  color: #82AAA1;
+  color: #007EA7;
   text-transform: uppercase;
   letter-spacing: 0.025em;
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: bold;
 }
 
@@ -154,7 +203,16 @@ h4 {
 }
 
 .resume-timeline .timeline-section .detail {
-  font-size: 0.9em;
+  font-size: 1em;
+}
+
+.resume-timeline .timeline-section .detail .detailed-list {
+  list-style: none;
+  padding: 0;
+}
+
+.resume-timeline .timeline-section .detail .detailed-list li {
+  padding-bottom: 0.5em;
 }
 
 .resume-timeline .timeline-section .circle {
@@ -166,7 +224,7 @@ h4 {
 }
 
 .resume-timeline .timeline-section .circle::before {
-  border: 3px solid #82AAA1;
+  border: 3px solid #007EA7;
   border-radius: 100%;
   content: '';
   display: block;
@@ -283,12 +341,8 @@ h4 {
   }
 }
 
-#contact {
-  text-align: center;
-}
-
 #contact .fa {
   font-size: 2em;
   padding: 5px;
-  color: #82AAA1;
+  color: #007EA7;
 }
